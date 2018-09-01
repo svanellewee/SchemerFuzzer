@@ -65,6 +65,13 @@ def test_number_excl_min_max():
     logger.debug("excl min = %s", result)
     validate(result.value, json_schema)
 
+def test_bool():
+    json_schema = {
+            "type": "boolean"
+    }
+    result = build(json_schema)
+    logger.debug("Boolval = %s", result)
+    validate(result.value, json_schema)
 
 def test_string_enum():
     json_schema = {

@@ -6,6 +6,20 @@ import logging
 logging.basicConfig()  #level=logging.DEBUG)
 logger = logging.getLogger(__name__)
 
+class Boolean(object):
+    def __init__(self, schema):
+        self.schema = schema
+        self._compile()
+    
+    def _compile(self):
+        self._value = random.choice([True, False])
+    
+    def __str__(self):
+        return "true" if self._value else "false"
+
+    @property
+    def value(self):
+        return self._value
 
 class Array(object):
     def __init__(self, schema):
@@ -162,6 +176,7 @@ lookups = {
         "number": Number,
         "array": Array,
         "string": String,
+        "boolean": Boolean
 }
 
 def build(schema):
