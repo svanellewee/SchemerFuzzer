@@ -28,5 +28,10 @@ setup(
     ],
     aliases={
         "test": "pytest"
+    },
+    entry_points={
+        "console_scripts": [
+            'schmrfzzr=schemerfuzzer.bin:main',
+        ]
     }
 )
