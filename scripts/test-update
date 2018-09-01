@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+PYTHON="${1:-./venv/bin/python}"
+find .  -type f -and \( -path "*/schemerfuzzer/*" -or -path "*/test/*" \)   -iname "*.py" | entr "${PYTHON}" setup.py test --addopts "-s"

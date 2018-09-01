@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+INIT_PYTHON="${1:-python3}"
+function install-venv() {
+   "${INIT_PYTHON}" -m venv venv
+   ./venv/bin/pip install -U pip
+   ./venv/bin/pip install -U pip -e . --process-dependency-links
+}
+install-venv
