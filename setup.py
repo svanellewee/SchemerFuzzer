@@ -12,7 +12,7 @@ setup(
     #url='http://pypi.python.org/pypi/TowelStuff/',
     license='LICENSE.txt',
     description='Does randomized data that follows a given json schema.',
-    long_description=open('README.txt').read(),
+    long_description=open('README.rst').read(),
     install_requires=[
         "jsonschema",
         "sre_yield==1.0.1",
