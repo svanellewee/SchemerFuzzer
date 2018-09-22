@@ -1,18 +1,19 @@
-#from distutils.core import setup
-#from setuptools.config import read_configuration
 from setuptools import setup
 
-   
+with open("./schemerfuzzer/version", "r") as version_file:
+    version = version_file.read()
+
 setup(
     name='SchemerFuzzer',
-    version='0.0.1',
+    version=version,
     author='Stephan van Ellewee',
     author_email='stephan.van.ellewee+schmrfzr@gmail.com',
     packages=['schemerfuzzer'],
-    #url='http://pypi.python.org/pypi/TowelStuff/',
+    url='https://github.com/svanellewee/SchemerFuzzer',
     license='LICENSE.txt',
     description='Does randomized data that follows a given json schema.',
     long_description=open('README.rst').read(),
+    package_data={'': 'version'},
     install_requires=[
         "jsonschema",
         "sre_yield==1.0.1",

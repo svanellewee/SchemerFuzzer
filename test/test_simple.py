@@ -3,10 +3,9 @@ import json
 import logging
 from jsonschema import validate
 
+
 logging.basicConfig(level=logging.DEBUG)
 logger = logging.getLogger(__name__)
-
- 
 
 
 def test_empty():
