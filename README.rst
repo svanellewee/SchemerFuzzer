@@ -19,3 +19,10 @@ Will result in something that looks like::
     #! cat result_json.json
     "(071)569-3221"
 
+Also to read from stdin provide dash as input parameter::
+
+    #! echo '{"type": "string"}' | schmrfzr --input - --output result_json.json
+Result::
+
+    #! cat result_json.json
+    "xi9ujefa0nubtpgdgf9hw1"
