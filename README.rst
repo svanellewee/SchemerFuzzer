@@ -21,8 +21,15 @@ Will result in something that looks like::
 
 Also to read from stdin provide dash as input parameter::
 
-    #! echo '{"type": "string"}' | schmrfzr --input - --output result_json.json
+    #! echo '{"type": "string"}' | schmrfzr --output result_json.json
+
 Result::
 
     #! cat result_json.json
     "xi9ujefa0nubtpgdgf9hw1"
+    
+Or just leave out the input/output switches and assume it's part of a pipeline::
+
+    #!  cat examples/test-regex.json | schmrfzzr  | tee another-result.json
+    #!  cat another-result.json
+    "(118)118-5809"
