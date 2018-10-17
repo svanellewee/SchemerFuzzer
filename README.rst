@@ -34,4 +34,5 @@ Or just leave out the input/output switches and assume it's part of a pipeline::
     #!  cat another-result.json
     "(118)118-5809"
 
-Please also see our [contribution guidelines](https://github.com/svanellewee/SchemerFuzzer/blob/master/CONTRIBUTING.md)
+Please also see our contribution guidelines here: https://github.com/svanellewee/SchemerFuzzer/blob/master/CONTRIBUTING.md
+
